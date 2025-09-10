@@ -75,7 +75,7 @@ label start:
 
     m "It seems"
 
-    m "You are not the savior the prohecy speaks of."
+    m "You are not the savior the prophecy speaks of."
 
     scene bg revelation
 
