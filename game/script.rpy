@@ -33,7 +33,7 @@ label start:
 
     scene bg night
 
-    show master serious at left
+    show master serious at leftG
 
     "Finally, as the last rays of sun dissappear, she turns around and tilts her head towards the youth standing next to her."
 
