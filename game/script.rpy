@@ -25,7 +25,7 @@ label start:
     # directory.
 
     #show master serious at left
-    show test
+    show untitled8 at left
 
     # These display lines of dialogue.
 
