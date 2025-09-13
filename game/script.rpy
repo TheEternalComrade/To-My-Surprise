@@ -24,7 +24,8 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show master serious at left
+    #show master serious at left
+    show test
 
     # These display lines of dialogue.
 
