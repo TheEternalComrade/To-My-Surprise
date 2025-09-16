@@ -24,8 +24,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    #show master serious at left
-    show untitled8 at left
+    show master serious at left
 
     # These display lines of dialogue.
 
@@ -83,7 +82,10 @@ label start:
     # there will be three trials. The trial of hubris, the trial of bravery, and the trial of justice
     # slow fade in to:
 
-    scene 
+    scene bg bus stop
+    "The youth stares so intensely at a compass, it's a wonder is had started melting"
+    "They groan"
+    "What's that now, 6 false alarms?"
 
 
     # This ends the game.
