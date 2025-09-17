@@ -33,7 +33,7 @@ label start:
 
     scene bg night
 
-    show master serious at leftG
+    show master serious at left
 
     "Finally, as the last rays of sun dissappear, she turns around and tilts her head towards the youth standing next to her."
 
@@ -47,7 +47,7 @@ label start:
 
     "A corner of the teen's mouth tilts up."
 
-    jo "Don't you say that the skilled don't rely on luck."
+    jo "the skilled don't rely on luck."
 
     "For just a moment, the master allows herself to smile back. She's trained them well."
 
@@ -79,13 +79,41 @@ label start:
 
     scene bg revelation
 
+    pause
+
     # there will be three trials. The trial of hubris, the trial of bravery, and the trial of justice
     # slow fade in to:
 
     scene bg bus stop
-    "The youth stares so intensely at a compass, it's a wonder is had started melting"
+    "The youth stares so intensely at a compass, it's a wonder it hasn't started melting"
     "They groan"
-    "What's that now, 6 false alarms?"
+    "{i}What's that now, 6 false alarms?{/i}"
+    "If they didn't know better, they would have though the thing was broken. But the mentor {i}had{/i} warned that it could work unexpectedly."
+    show compass
+    "For whatever reason, the compass was currently pointing at the sidewalk in front of them."
+    "{i}Strange{/i}"
+    "They had barely stepped onto bath before-"
+    scene collision
+    #He dropped
+    pause
+    scene bg bus stop
+    "Both Jordan and the jogger stagger background"
+    e "You-?"
+    e "Who just stands in the middle of sidewalk?"
+    "Jordan's heart is racing. But not because of the collision"
+    "The compass is glowing"
+    "{i}Is it him?{/i}"
+    "However, the compass isn't pointing at the young man, but at the card he'd dropped"#maybe he was supposed to be helping samira hand out fliers for a special promotion at the restaurant
+    "Jordan picks it up. It's a flier for some soul food restaurant."
+    jo "Where did you get this?"
+    "The jogger snatches it away from them before they can get a good look at the address"
+    e "What's it too you?"
+    jo "Uh"
+    "Jordan realizes \"I'm looking for the one destined to prevent looming evil\" probably wouldn't go over well."
+    shows jordan serious # or contemplative
+    "They quickly think up a lie"
+    jo "I think I used to go to this place when I was younger, but I don't remember the address"
+
 
 
     # This ends the game.
