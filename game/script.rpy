@@ -175,11 +175,13 @@ label start:
     "Instincts kicking in, Jordan draws their bow and prepares to loose an arrow"
 
     #scene bg ernesto defends/attacks
-    "But before they can take take aim, Ernesto tries attack the man in a decently effective way"
-    "Realistically, the man could have drawn his other knife and Ernesto would be bleeding on the pavement"
-    "Instead, he glares at Samira"
+    "But before they can take take aim, Ernesto tackles the man."
+    "Jordan knew that the man could easily escape and Ernesto would be bleeding on the pavement"
+    "But he wasn't after the young man"
+    "If he made another move, he'd have an arrow through his skull in an instant. 
+    Instead, he glares at Samira"
     "man" "You win...for now. But next time, we won't go as easy." 
-    "With that, he dissapears in a cloud of smoke"
+    "With that, he dissappears into a cloud of smoke"
 
     show ernesto panicked
     show samira panicked
@@ -192,8 +194,33 @@ label start:
     s "WHY THE FUCK DO YOU HAVE A FUCKING BOW AND ARROW!"
     e "Why was that man chasing Samira?" 
     "{i}So that's what her name is...{/i}"
+    #For some reason, that line up there makes a good ending. If nothing else, I'd like to have an ending scene with them looking in the parking lot. But what about the kneeling scene TT. If need be, we could skip over the parking lot attack and just mention it in retrospect
 
-    #ernesto proceeds to put the attacker in a chokehold.
+    scene hq #aka, a council member's living room/basement.  They're near the end of the meeting
+    #Just a bunch of comments from the council members here
+    #She's prolly using her crutches here because she's expecting to be moving less
+
+    show s nervous
+    "Samira is very uncomfortable with all the attention being placed on her"
+
+    scene jo sexy kneel
+    
+    scene hq
+
+    "She remembers how Jordan swore that no harm would befall her "
+    "Sure, all of this was weird as fuck, but for seem reason she kinda believed them?"
+    "At least they let her bring Jeante."
+    "Speaking of Jeante, he looked as uncomfortable as she was"
+
+    show je sus
+    show s nervous
+    
+    je "This is so cooked. I don't know how they expect someone to learn all of this in a month"
+    s "I mean, Jordan looks like they can kill someone? And Ernesto knows how to fight too?"
+    je "But you're the one who has to kill the boss!"    
+
+
+
 
 
 
