@@ -6,7 +6,6 @@
 define jo = Character("Jordan")
 define s = Character("Samira")
 define je = Character("Jeante")
-define e  = Character("Ernesto")
 define m = Character("Master")
 
 
@@ -14,15 +13,7 @@ define m = Character("Master")
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
     scene bg dusk
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
 
     show master serious at left
 
@@ -39,11 +30,11 @@ label start:
 
     show jordan serious at right
 
-    m "It's time"
+    #m "It's time"
 
     "Jordan holds out their hand. Into it, the woman places a small, black key specked with gold."
 
-    m "When the time comes, strike swift and true. The spirits will guide you. Good luck."
+    m "<When the time comes, strike swift and true. The spirits will guide you.> Good luck."
 
     "A corner of the teen's mouth tilts up."
 
@@ -84,6 +75,7 @@ label start:
     # there will be three trials. The trial of hubris, the trial of bravery, and the trial of justice
     # slow fade in to:
 
+    #Merry meet
     scene bg bus stop
     show jordan mad
     "The youth stares so intensely at a compass, it's a wonder it hasn't started melting"
@@ -131,6 +123,9 @@ label start:
     jo "I think I used to go to this place when I was younger, but I don't remember the address"
 
     e "..."
+
+    show ernesto neutral
+
     e "I suppose you can take a photo of it"
 
     "He holds it out"
@@ -151,6 +146,7 @@ label start:
     "As soon as Ernesto is gone, Jordan takes out their phone and enters the restaurant address"
     "{i}Huh, it's really close by? What does preventing great evil have to do with a soul food restaurant though{/i}"
 
+    #maybe change this  to the library. perhaps she was just leaving for 
     scene bg gigis soulfood parking lot
     "It was this they were still wondering as they arrived at the parking lot of the restaurant"
     #question mark until we know her name
@@ -178,7 +174,8 @@ label start:
     "But before they can take take aim, Ernesto tackles the man."
     "Jordan knew that the man could easily escape and Ernesto would be bleeding on the pavement"
     "But he wasn't after the young man"
-    "If he made another move, he'd have an arrow through his skull in an instant. 
+    "If he made another move, he'd have an arrow through his skull in an instant."
+   
     Instead, he glares at Samira"
     "man" "You win...for now. But next time, we won't go as easy." 
     "With that, he dissappears into a cloud of smoke"
@@ -196,17 +193,17 @@ label start:
     "{i}So that's what her name is...{/i}"
     #For some reason, that line up there makes a good ending. If nothing else, I'd like to have an ending scene with them looking in the parking lot. But what about the kneeling scene TT. If need be, we could skip over the parking lot attack and just mention it in retrospect
 
-    scene hq #aka, a council member's living room/basement.  They're near the end of the meeting
+    scene bg hq #aka, a council member's living room/basement.  They're near the end of the meeting
     #Just a bunch of comments from the council members here
     #She's prolly using her crutches here because she's expecting to be moving less
 
     show s nervous
     "Samira is very uncomfortable with all the attention being placed on her"
 
-    scene jo sexy kneel
+    scene jo suave kneel
     
+    # maybe instead of at hq, they're discussing this in the car
     scene hq
-
     "She remembers how Jordan swore that no harm would befall her "
     "Sure, all of this was weird as fuck, but for seem reason she kinda believed them?"
     "At least they let her bring Jeante."
@@ -215,9 +212,24 @@ label start:
     show je sus
     show s nervous
     
-    je "This is so cooked. I don't know how they expect someone to learn all of this in a month"
-    s "I mean, Jordan looks like they can kill someone? And Ernesto knows how to fight too?"
-    je "But you're the one who has to kill the boss!"    
+    je "This is so cooked. I don't know how they expect someone to learn all of this in a month."
+    s "I mean, Jordan looks like they can kill someone? And Ernesto knows how to fight too? That'll probably make things easier"
+    je "But you're the one who has to kill the boss!" 
+    "Samira sighs"
+    s "I'd rather not do this, but I also don't really want to see what happens if I do nothing"
+    s "I must've been chosen for a reason"
+    s "If I just follow everything they say, I'll be fine"
+    je "I guess..."
+
+    #it would be cool to have cutscenes, to be added later if i have
+    #Trial of Bravery
+
+    #honeslty, Imma prolly delete ernesto from teh character roster. he doesn't really even do much, and it would give more time to focuse on the other characters
+    scene bg jeantes car
+    "RING!!!!"
+    "Jeante taps a button on his "
+
+
 
 
 
