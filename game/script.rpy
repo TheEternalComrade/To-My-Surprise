@@ -6,7 +6,8 @@
 define jo = Character("Jordan")
 define s = Character("Samira")
 define je = Character("Jeante")
-define m = Character("Master")
+define m = Character("Mentor")
+define e = Character("Error")
 
 
 # The game starts here.
@@ -23,7 +24,6 @@ label start:
     "She's standing there motionlessly, waiting and waiting."
 
     scene bg night
-
     show master serious at left
 
     "Finally, as the last rays of sun dissappear, she turns around and tilts her head towards the youth standing next to her."
@@ -176,7 +176,7 @@ label start:
     "But he wasn't after the young man"
     "If he made another move, he'd have an arrow through his skull in an instant."
    
-    Instead, he glares at Samira"
+    "Instead, he glares at Samira"
     "man" "You win...for now. But next time, we won't go as easy." 
     "With that, he dissappears into a cloud of smoke"
 
