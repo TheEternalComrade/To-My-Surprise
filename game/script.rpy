@@ -94,22 +94,53 @@ label start:
     "They head over to their \"VIP Senior Table\"."
 
     scene bg VIPST
-    "Jeante lays out the spread of food he had brought for them: rice and peas, jerk chicken, and even some fried plantain!"
+    
+    "Jeante lays out the spread of food he had brought for them.
 
+    #maybe a drawing of this if I have time
+    "Rice and peas, jerk chicken, and even some fried plantain!"
 
+    show samira devious
+    show jeante smile
 
+    "Samira scoops up a generous amount of each."
 
+    show jeante indignant
 
+    "Hey! Save some for me"
 
+    show samira happy
 
+    s "Your parents may be assholes, but they sure can cook!"
 
+    show jeante nervous
 
+    je "Yeah"
 
+    show jeante happy
 
+    "However, before she can get more than a few spoonfuls-"
+    "???" "Hey, can we talk? It\'s really important"
 
+    show samira unsure
 
+    "Samira reluctantly looks up at the person who\'d dared to interrupt their feast"
+    "It was another senior that Samira didn\'t know that well. Jordan something? She vaguely remembered thinking in passing that they were cute but not much else"
 
+    show jeante nervous
 
+    "She looks at Jeante"
+    "He just shrugs"
+
+    # yes or no
+    # no makes them slightly annoyed at you and they sit down anyway
+    #yes is the good girl option
+    
+    show samira unbothered
+    s "Aight, pull up a seat I guess"
+    "She continues eating her food"
+    show jo serious
+    jo "I might as well get to the point"
 
     # This ends the game.
 
