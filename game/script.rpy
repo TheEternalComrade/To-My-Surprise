@@ -3,48 +3,50 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define jo = Character("Jordan")
-define s = Character("Samira")
-define je = Character("Jeante")
-define m = Character("Mentor")
-define e = Character("Error")
+define jo = Character("Jordan", color="#d87210")
+define s = Character("Samira", color="#780606")
+define je = Character("Jeante", color="dab10a")
+define m = Character("Mrs.Huynh", color="#000435")
+define e = Character("Ernesto", color="#d5c58a")
 
 
 # The game starts here.
 
 label start:
 
-    scene bg dusk
+    scene bg parknight
 
-    show master serious at left
+    show master serious
 
-    # These display lines of dialogue.
 
-    "A middle aged woman glares at the sky. There's an almost imperceptible bead of sweat on her brow."
+    "A middle aged woman stares at her watch intensely. There's an almost imperceptible bead of sweat on her brow."
     "She's standing there motionlessly, waiting and waiting."
 
-    scene bg night
-    show master serious at left
+    show master serious 
 
-    "Finally, as the last rays of sun dissappear, she turns around and tilts her head towards the youth standing next to her."
+    "Finally, as the clock hits midnight, she turns around and tilts her head towards the youth standing next to her."
+    show master serious at left
 
     show jordan serious at right
 
-    #m "It's time"
 
-    "Jordan holds out their hand. Into it, the woman places a small, black key specked with gold."
+    "Jordan holds out their hand. In it, there is a small, dark key specked with gold."
 
-    m "<When the time comes, strike swift and true. The spirits will guide you.> Good luck."
+    m "Good luck."
 
+    show jordan smile
     "A corner of the teen's mouth tilts up."
 
-    jo "the skilled don't rely on luck."
+    jo "I'll be back soon."
 
+    show jordan smile at right
+    show master smile at left
     "For just a moment, the master allows herself to smile back. She's trained them well."
 
-    m "Open the gate."
+    show master serious at left
 
-    "Jordan closes their eyes, holds the key out as if to insert it, and turns."#this might be a drawing
+    show jordan serious
+    "Jordan holds the key out as if to insert it, and turns."
     "Nothing happens." 
     "The two wait a moment. Then another. Jordan twists the key again, more forcefully this time."
     "Still nothing."
