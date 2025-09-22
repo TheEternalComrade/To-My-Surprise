@@ -3,12 +3,13 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define jo = Character("Jordan", color="#d87210")
+define jo = Character("Jordan", color="#d87210", image="jordan")
 define s = Character("Samira", color="#780606")
 define je = Character("Jeante", color="#bf77f6")
 define m = Character("Mrs.Huynh", color="#000435")
 define e = Character("Ernesto", color="#d5c58a")
 
+image side jordan happy = "test.jpg"
 
 # The game starts here.
 
@@ -146,8 +147,8 @@ label start:
 
     show jo serious
 
-    jo "I might as well get to the point"
-    "They pull out a key crafte in a beautiful star motif"
+    jo happy "I might as well get to the point"
+    "They pull out a key crafted in a beautiful star motif"
 
     show samira suprised
 
@@ -184,28 +185,64 @@ label start:
 
     "You're going to save this realm"
 
-    show bg ph#An explanation, disbelief, and some magical feats later
+    scene bg ph
+    pause
+    #An explanation, disbelief, and some magical feats later
 
+    show bg vipst3
     show jeante nervous
 
     je "This is so cooked. What if you get attacked or something?"
 
     show samira nervous
 
-    s "I mean, Jordan seems pretty strong.”
-    "Their shirt is baggy, but it doesn\’t hide the impressive muscle beneath"
+    s "I mean, Jordan seems pretty strong."
+    "Their shirt is baggy, but it doesn\'t hide the impressive muscle beneath"
     "Plus they have those weapons"
     "They could probably protect me?"
 
     show jordan annoyed
+
     "Of course I'll protect you."
 
     show Jeante nervous
-    je "But you still have to go to some other realm!"
-    show Samira resigned
-    s "I'd rather not do this, but I also don't really want to see what happens if I do nothing"
-    s "I must've been chosen for a reason."
 
+    je "But you still have to go to some other realm!"
+
+    show Samira resigned
+
+    s "I'd rather not do this, but I also don't really want to see what happens if I do nothing"
+    s "I must've been chosen because I'll succeed."
+    s "I'll be fine!"
+
+    show jeante nervous
+
+    je "I guess..."
+    s "Now come on, let\'s finish this food before lunch is over"
+    Je "Bruh. How do you still have an appetite?"
+    "Jordan stands up  to leave"
+    s "You too Jordan!"
+    "Samira had noticed them eyeing the spread"
+
+    show Jordan suprised
+
+    jo "..."
+
+    show jordan serious 
+
+    jo "I appreciate sentiment, but I have to leave."
+    
+    show samira sad
+
+    "..."
+
+    show jeante sad
+
+    "..."
+
+    show jordan nervous
+
+    jo "Maybe next time?"
 
 
     #choice?
