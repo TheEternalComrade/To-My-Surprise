@@ -93,9 +93,9 @@ label start:
     s "Fineeeeeee"
     "They head over to their \"VIP Senior Table\"."
 
-    scene bg VIPST
+    scene bg vipst
     
-    "Jeante lays out the spread of food he had brought for them.
+    "Jeante lays out the spread of food he had brought for them."
 
     #maybe a drawing of this if I have time
     "Rice and peas, jerk chicken, and even some fried plantain!"
@@ -133,14 +133,84 @@ label start:
     "He just shrugs"
 
     # yes or no
-    # no makes them slightly annoyed at you and they sit down anyway
+    # no makes them slightly annoyed at you and they sit down anyway or maybe they crash out at the rejection and they get kicked out fo school. that would be funny+++++
     #yes is the good girl option
     
     show samira unbothered
+
     s "Aight, pull up a seat I guess"
+
+    scene bg vipst3
+
     "She continues eating her food"
+
     show jo serious
+
     jo "I might as well get to the point"
+    "They pull out a key crafte in a beautiful star motif"
+
+    show samira suprised
+
+    "Woah!"
+    "That's a helluva key!"
+    "The offer it up to Samira."
+
+    show samira confused
+
+    "Thanks?"
+    "Gingerly, she reaches out to grab it"
+    "Suddenly, she's transported...somewhere else."
+
+    scene bg treasure
+
+    "Where the food was just a moment before, she saw an intricate chest."
+    "It felt familiar and strange at the same time."
+    "For some reason she felt compelled to reach out for it."
+
+    scene vipst3
+    "But instead of the chest, there was her plate of food."
+    "She drops it like it's made of lava."
+    
+    show samira shocked
+
+    s "What the fuck was that?"
+    
+    show samira sus
+    show jo suprised #or in awe
+
+    "Jordan stares at her in disbelief"
+
+    scene proclamation
+
+    "You're going to save this realm"
+
+    show bg ph#An explanation, disbelief, and some magical feats later
+
+    show jeante nervous
+
+    je "This is so cooked. What if you get attacked or something?"
+
+    show samira nervous
+
+    s "I mean, Jordan seems pretty strong.”
+    "Their shirt is baggy, but it doesn\’t hide the impressive muscle beneath"
+    "Plus they have those weapons"
+    "They could probably protect me?"
+
+    show jordan annoyed
+    "Of course I'll protect you."
+
+    show Jeante nervous
+    je "But you still have to go to some other realm!"
+    show Samira resigned
+    s "I'd rather not do this, but I also don't really want to see what happens if I do nothing"
+    s "I must've been chosen for a reason."
+
+
+
+    #choice?
+
+
 
     # This ends the game.
 
