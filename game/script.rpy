@@ -147,26 +147,26 @@ label start:
 
     show jo serious
 
-    jo happy "I might as well get to the point"
+    jo "I might as well get to the point"
     "They pull out a key crafted in a beautiful star motif"
 
     show samira suprised
 
-    "Woah!"
-    "That's a helluva key!"
-    "The offer it up to Samira."
+    s "Woah!"
+    s "That's a helluva key!"
+    "They offer it up to Samira."
 
     show samira confused
 
-    "Thanks?"
+    s "Thanks?"
     "Gingerly, she reaches out to grab it"
     "Suddenly, she's transported...somewhere else."
 
     scene bg treasure
 
-    "Where the food was just a moment before, she saw an intricate chest."
+    "Where the food was just a moment before, she sees an intricate chest."
     "It felt familiar and strange at the same time."
-    "For some reason she felt compelled to reach out for it."
+    "For some reason, she felt compelled to reach out for it."
 
     scene vipst3
     "But instead of the chest, there was her plate of food."
@@ -197,19 +197,19 @@ label start:
     show samira nervous
 
     s "I mean, Jordan seems pretty strong."
-    "Their shirt is baggy, but it doesn\'t hide the impressive muscle beneath"
-    "Plus they have those weapons"
-    "They could probably protect me?"
+    s "Their shirt is baggy, but it doesn\'t hide the impressive muscle beneath"
+    s "Plus they have those weapons"
+    s "They could probably protect me?"
 
     show jordan annoyed
 
-    "Of course I'll protect you."
+    jo "Of course I'll protect you."
 
-    show Jeante nervous
+    show jeante nervous
 
     je "But you still have to go to some other realm!"
 
-    show Samira resigned
+    show samira resigned
 
     s "I'd rather not do this, but I also don't really want to see what happens if I do nothing"
     s "I must've been chosen because I'll succeed."
@@ -219,12 +219,12 @@ label start:
 
     je "I guess..."
     s "Now come on, let\'s finish this food before lunch is over"
-    Je "Bruh. How do you still have an appetite?"
+    je "Bruh. How do you still have an appetite?"
     "Jordan stands up  to leave"
     s "You too Jordan!"
     "Samira had noticed them eyeing the spread"
 
-    show Jordan suprised
+    show jordan suprised
 
     jo "..."
 
@@ -232,20 +232,75 @@ label start:
 
     jo "I appreciate sentiment, but I have to leave."
     
-    show samira sad
+    show samira unhappy
 
-    "..."
+    s "..."
 
-    show jeante sad
+    show jeante unhappy
 
-    "..."
+    je "..."
 
     show jordan nervous
 
     jo "Maybe next time?"
 
-
+    #"With that, they take their leave."
     #choice?
+
+    scene bg black
+    scene park dusk
+    show Jeante nervous
+
+    je "{i}This{/i} is it?"
+    "Mrs. Huynh shoots a glare at him."
+    je "Sorry, it's just…so normal."
+
+    show jordan smile 
+
+    je "Anyways"
+    je "I brought some snacks! Y\’all should probably eat something before you go"
+    
+    show samira excited
+
+    show master smile 
+    
+    m "How thoughtful!"
+
+    show jordan thoughtful
+
+    jo "We won't feel hunger in the dark realm"
+
+    show jeante sus, samira sus
+
+    "..."
+    
+    show jordan nervous
+
+    jo "I suppose it wouldn't hurt"
+    s "YEAA!"
+
+    scene bg picnic
+    #fade
+
+    scene bg park night
+
+    "Jeante suddenly has the presence of mind to check the time"
+
+    show jeante surprised
+
+    "It's half past 10!"
+
+    show jeante unhappy
+
+    "He groans"
+
+    je "My parents are gonna kill me"
+
+    show jeante nervous at right
+    show samira wince at left
+
+    
+
 
 
 
