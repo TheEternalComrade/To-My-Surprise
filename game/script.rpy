@@ -270,7 +270,8 @@ label start:
 
     jo "We won't feel hunger in the dark realm"
 
-    show jeante sus, samira sus
+    show jeante sus
+    show samira sus
 
     "..."
     
@@ -280,6 +281,7 @@ label start:
     s "YEAA!"
 
     scene bg picnic
+    pause
     #fade
 
     scene bg park night
@@ -299,7 +301,78 @@ label start:
     show jeante nervous at right
     show samira wince at left
 
+    s "Oof, curfew"
+
+    show jo confused
     
+    jo "Why don\'t you stay until midnight?"
+
+    je "My parents are really strict"
+    je "They\'re probably already planning to jump me when I get home"
+
+    show samira thoughtful at left
+    s "On the other hand..."
+    s "It would really mean a lot if you were there to send me off"
+    s "Plus, it\'s not like you can get into more trouble?"
+
+menu:
+        "Leave":
+            jump leave_choice
+        "Stay":
+            jump stay_choice
+
+label leave_choice:
+
+    show jeante unhappy
+
+    je "Sorry bro, but I need to get home"
+
+    show samira unhappy
+
+    s "It was worth a shot"
+
+    show samira sadsmile
+
+    s "c\'mere"
+
+    scene bg hug
+
+    je "Stay safe Samira"
+    s "I'll be back to harass your sorry ass before you know it"
+
+    scene bg black
+
+    "That was the last time he ever saw her."
+    "What was supposed to have been simple grab-n-go had turned awry."
+    "They had failed, and the world was going to end."
+
+    scene bg bad ending
+    pause
+
+    return
+
+label stay_choice:
+
+    show jeante serious
+    
+    je "You know what? Fuck it, I'm staying!"
+
+    show samira happy
+
+    s "Woo!"
+
+    scene bg black
+
+    show samira nervous
+    "As midnight drew closer, and closer, Samira grew more and more antsy."
+    "Though she would be reluctant to admit it, Jeante knew how stressed she was probably feeling."
+    "Jeante didn’t want to add to it, but there was something nagging at him."
+menu:
+    "Say what's on your mind":
+    
+    ##choice to say it or not
+
+
 
 
 
