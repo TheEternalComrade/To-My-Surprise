@@ -67,13 +67,14 @@ label start:
 
     scene bg revelation
     pause
-
+    with fade
     # slow fade in to:
 
     #Merry meet
 
-    scene bg first impressions
+    scene bg act1
     pause
+    with fade 
     scene busy hall
     show Samira angry at right
     show Jeante smiling at left
@@ -365,7 +366,9 @@ label stay_choice:
     s "Woo!"
 
     scene bg black
-    pause
+    with fade
+
+    scene bg park night
 
     show samira nervous
     "As midnight drew closer, and closer, Samira grew more and more antsy."
@@ -387,7 +390,6 @@ label stay_quiet_choice:
     "Like everyone else, he watches in awe as Samira and Jordan enter and dissapear through the door."
 
     scene bg black
-    pause
 
     "That was the last time he ever saw her."
     "What was supposed to have been simple grab-n-go had turned awry."
@@ -456,7 +458,7 @@ label say_choice:
     scene bg into the dark realm
 
     scene bg black
-    pause
+    with fade
 
     scene bg dark library
 
