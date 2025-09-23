@@ -39,7 +39,7 @@ label start:
     show jordan smile at right
     show master smile at left
 
-    "For just a moment, the master allows herself to smile back. She's trained them well."
+    "A grin breaks out across Mrs. Huynh's face. She's trained them well."
 
     show master serious at left
     show jordan serious
@@ -72,7 +72,8 @@ label start:
 
     #Merry meet
 
-    scene bg black
+    scene bg first impressions
+    pause
     scene busy hall
     show Samira angry at right
     show Jeante smiling at left
@@ -247,12 +248,13 @@ label start:
     #"With that, they take their leave."
     #choice?
 
-    scene bg black
+    scene bg final  balance
+    pause
     scene park dusk
     show Jeante nervous
 
     je "{i}This{/i} is it?"
-    "Mrs. Huynh shoots a glare at him."
+    "Mrs. Huynh looks at him sideways."
     je "Sorry, it's just…so normal."
 
     show jordan smile 
@@ -341,6 +343,7 @@ label leave_choice:
     s "I'll be back to harass your sorry ass before you know it"
 
     scene bg black
+    pause
 
     "That was the last time he ever saw her."
     "What was supposed to have been simple grab-n-go had turned awry."
@@ -362,21 +365,175 @@ label stay_choice:
     s "Woo!"
 
     scene bg black
+    pause
 
     show samira nervous
     "As midnight drew closer, and closer, Samira grew more and more antsy."
     "Though she would be reluctant to admit it, Jeante knew how stressed she was probably feeling."
-    "Jeante didn’t want to add to it, but there was something nagging at him."
+    "Jeante didn\'t want to add to it, but there was something nagging at him."
 menu:
-    "Say what's on your mind":
-    
+    "Stay quiet":
+        jump stay_quiet_choice
+    "Say it":
+        jump say_choice
     ##choice to say it or not
 
+label stay_quiet_choice:
+
+    show jeante nervous
+
+    "He decides to stay quite"
+    je "{i}It's probably nothing anyway{/i}"
+    "Like everyone else, he watches in awe as Samira and Jordan enter and dissapear through the door."
+
+    scene bg black
+    pause
+
+    "That was the last time he ever saw her."
+    "What was supposed to have been simple grab-n-go had turned awry."
+    "They had failed, and the world was going to end."
+
+    scene bg bad ending
+    pause
+
+    return
+
+label say_choice:
+
+    show jeante thoughtful
+
+    jo "Why this place?"
+    "Once again, Ms. Huynh side-eyes him"
+
+    show jeante nervous at right
+    show master serious at left
+
+    m "This place"
+    m "Has the most clear magical signature for the chest of worlds"
+
+    show jeanted thoughtful at right
+
+    jo "But if the Chest of Worlds is so imporant to the dark realm, wouldn\'t they hide it better?"
+    
+    show master thoughtful 
+
+    m "..."
+
+    show master shocked
+
+    m "You're right"
+
+    show master serious
+
+    "This is the wrong gate"
+
+    show jordan shocked
+    show samira shocked
+    show jeante shocked
+    "What?!"
+
+    show master serious
+
+    "But I know where the right one is. We need to go {i}now{/i}"
+
+    scene bg car drive
+
+    scene bg library
+
+    "Somehow they made it just in the nick of time"
+    "Thank goodness for all-day libraries"
+
+    show master serious
+
+    "Ms.Huynh nods at Samira"
+
+    scene bg library
+
+    "Jordan grabs onto Samira\'s hand"
+    "Samira takes a deep breath, closes her eyes, reaches forwards, and turns the key."
+    "A door appears. She and Jordan step through"
+
+    scene bg into the dark realm
+
+    scene bg black
+    pause
+
+    scene bg dark library
+
+    "If it weren\'t for the strange coloration, Samira would have thought that they were still in the library."
+    "That and the fact that in front of them was the Chest of Worlds"
+
+    scene bg treasure
+
+    "It was just as she remembered it from her vision"
+
+    show j suprise
+
+    "Jordan gasped"
+    "s relief" "Well...that was easy"
+    "???" "Stop right there scoundrels!"
+
+    show jordan serious
+    show samira nervous
+
+    s "{i} Fucking jinxed it{/i}"
+    #scene bg armed in in library?
+    "At once, Jordan summoned their shield and spear"
+    s "Grab it and escape Samira! I\'ll hold him off..."
+    "???" "WHOA! Is violence really worth a chest that can\'t even be opened?"
+
+menu:
+    "Attack him":
+        jump dead_ernesto_choice
+    "Hear him out":
+        jump live_ernesto_choice
+
+label dead_ernesto_choice:
+    "Jordan had been expecting the young man to put up a fight"
+    "But he did nothing to stop the spear from piercing straight through his heart"
+
+    scene bg ernesto dead
+    pause
+
+    "For a moment, there is silence"
+    "Then the world explodes into darkness"
+
+    scene bg bad ending
+    pause
+    return
+label live_ernesto_choice:
+    show jordan serious
+
+    "Jordan remains on guard"
+    jo "We need that chest to save our world."
+    
+    show ernesto thoughtful
+    "???" "Wait second"
+
+menu:
+    "Take the light stone":
+        jump light_stone_choice
+    "Take the dark stone":
+        jump dark_stone_choice
+
+label light_stone_choice:
+    "The world explodes into darkness"
+    return
+
+label dark_stone_choice:
+    scene bg shining light
+
+    "Good job! The world is saved and everyone gets to live normally ever after."
+
+    scene bg good ending
+    return 
+
+
+    
 
 
 
 
 
-    # This ends the game.
 
     return
