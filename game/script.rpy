@@ -144,7 +144,45 @@ label start:
     # yes or no
     # no makes them slightly annoyed at you and they sit down anyway or maybe they crash out at the rejection and they get kicked out fo school. that would be funny+++++
     #yes is the good girl option
+
+menu:
+    "Let them sit":
+        jump let_sit_choice
+    "Rebuke them":
+        jump rebuke_choice
+
+label rebuke_choice:
+    show samira neutral
+    s "Nah, I'm kind occupied right now"
+    "She gestures towards her plate"
+    s "It can't be {i}that{/i} important. Maybe later"
+
+    show jordan angry
+
+    show jordan serious
     
+    jo "..."
+
+    show jordan angry #it would be cool if there was some sort of shake
+    "HOW DARE SHE!"
+    "What they had spent so much of their life training for, she simply dismisses?"
+    "They see red"
+
+    scene bg black
+
+    "Jordan has to be escorted out of the school."
+    "It took several security guards to do it."
+    "They never got to tell Samira that she was the chosen one."
+    "The world ends"
+
+    scene bg bad ending
+    pause
+
+    return
+
+
+
+label let_sit_choice:    
     show samira unbothered
 
     s "Aight, pull up a seat I guess"
