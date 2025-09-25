@@ -4,10 +4,10 @@
 # name of the character.
 
 define jo = Character("Jordan", color="#d87210", image="jordan")
-define s = Character("Samira", color="#780606")
-define je = Character("Jeante", color="#bf77f6")
-define m = Character("Mrs.Huynh", color="#000435")
-define e = Character("Ernesto", color="#d5c58a")
+define s = Character("Samira", color="#780606", image="samira")
+define je = Character("Jeante", color="#bf77f6", image="jeante")
+define m = Character("Mrs.Huynh", color="#000435", image="master")
+define e = Character("Ernesto", color="#d5c58a", image="ernesto")
 
 image side jordan happy = "test.jpg"
 
@@ -77,7 +77,7 @@ label start:
     with fade 
     scene busy hall
     show Samira angry at right
-    show Jeante smiling at left
+    show Jeante smile at left
     s  "What the hell was that test? I swear she didn't cover half of that shit in class"
 
     show jeante bashful at left
@@ -112,7 +112,7 @@ label start:
 
     "Hey! Save some for me"
 
-    show samira happy
+    show samira smile
 
     s "Your parents may be assholes, but they sure can cook!"
 
@@ -120,12 +120,12 @@ label start:
 
     je "Yeah"
 
-    show jeante happy
+    show jeante smile
 
     "However, before she can get more than a few spoonfuls-"
     "???" "Hey, can we talk? It\'s really important"
 
-    show samira unsure
+    show samira thoughtful
 
     "Samira reluctantly looks up at the person who\'d dared to interrupt their feast"
     "It was another senior that Samira didn\'t know that well. Jordan something? She vaguely remembered thinking in passing that they were cute but not much else"
@@ -152,7 +152,7 @@ label start:
     jo "I might as well get to the point"
     "They pull out a key crafted in a beautiful star motif"
 
-    show samira suprised
+    show samira surprised
 
     s "Woah!"
     s "That's a helluva key!"
@@ -174,12 +174,12 @@ label start:
     "But instead of the chest, there was her plate of food."
     "She drops it like it's made of lava."
     
-    show samira shocked
+    show samira surprised
 
     s "What the fuck was that?"
     
     show samira sus
-    show jo suprised #or in awe
+    show jo surprised #or in awe
 
     "Jordan stares at her in disbelief"
 
@@ -211,7 +211,7 @@ label start:
 
     je "But you still have to go to some other realm!"
 
-    show samira resigned
+    show samira thoughtful
 
     s "I'd rather not do this, but I also don't really want to see what happens if I do nothing"
     s "I must've been chosen because I'll succeed."
@@ -226,7 +226,7 @@ label start:
     s "You too Jordan!"
     "Samira had noticed them eyeing the spread"
 
-    show jordan suprised
+    show jordan surprised
 
     jo "..."
 
@@ -238,7 +238,7 @@ label start:
 
     s "..."
 
-    show jeante unhappy
+    show jeante sad
 
     je "..."
 
@@ -273,8 +273,8 @@ label start:
 
     jo "We won't feel hunger in the dark realm"
 
-    show jeante sus
-    show samira sus
+    show jeante sad
+    show samira sad
 
     "..."
     
@@ -295,14 +295,14 @@ label start:
 
     "It's half past 10!"
 
-    show jeante unhappy
+    show jeante sad
 
     "He groans"
 
     je "My parents are gonna kill me"
 
     show jeante nervous at right
-    show samira wince at left
+    show samira sad at left
 
     s "Oof, curfew"
 
@@ -326,11 +326,11 @@ menu:
 
 label leave_choice:
 
-    show jeante unhappy
+    show jeante sad
 
     je "Sorry bro, but I need to get home"
 
-    show samira unhappy
+    show samira sad
 
     s "It was worth a shot"
 
@@ -361,7 +361,7 @@ label stay_choice:
     
     je "You know what? Fuck it, I'm staying!"
 
-    show samira happy
+    show samira smile
 
     s "Woo!"
 
@@ -411,11 +411,11 @@ label say_choice:
     show master serious at left
 
     m "This place"
-    m "Has the most clear magical signature for the chest of worlds"
+    m "Has the most clear magical signature for the Sun Chest"
 
-    show jeanted thoughtful at right
+    show jeante thoughtful at right
 
-    jo "But if the Chest of Worlds is so imporant to the dark realm, wouldn\'t they hide it better?"
+    jo "But if the Sun Chest is so imporant to the dark realm, wouldn\'t they hide it better?"
     
     show master thoughtful 
 
@@ -430,7 +430,7 @@ label say_choice:
     "This is the wrong gate"
 
     show jordan shocked
-    show samira shocked
+    show samira surpised
     show jeante shocked
     "What?!"
 
@@ -455,21 +455,19 @@ label say_choice:
     "Samira takes a deep breath, closes her eyes, reaches forwards, and turns the key."
     "A door appears. She and Jordan step through"
 
-    scene bg into the dark realm
-
     scene bg black
     with fade
 
     scene bg dark library
 
     "If it weren\'t for the strange coloration, Samira would have thought that they were still in the library."
-    "That and the fact that in front of them was the Chest of Worlds"
+    "That and the fact that in front of them was the Sun Chest"
 
     scene bg treasure
 
     "It was just as she remembered it from her vision"
 
-    show j suprise
+    show j surprise
 
     "Jordan gasped"
     "s relief" "Well...that was easy"
@@ -509,33 +507,90 @@ label live_ernesto_choice:
     "Jordan remains on guard"
     jo "We need that chest to save our world."
     
-    show ernesto thoughtful
-    "???" "Wait second"
+    show ernesto nervous
+
+    "???" "Well I\'m sure we can come to an agreement if-"
+
+    show ernesto surprised
+
+    "???" "How did you open that?"
+    "The young man is looking at Samira now"
+    "She's staring at the contents of the now open chest, the star key in the lock."
+
+    show ernesto surpised
+    "???" "Wait a second"
+    "???" "“I think there\'s been a misunderstanding"
+
+    scene bg backstory
+    pause
+
+    scene bg stones
+    pause
+
+    show jo confused
+
+    jo "But, what are these stones for?"
+
+    scene bg lib chilling
+
+    show ernesto neutral
+
+    "Ernesto shrugs"
+    e "Our prophecy wasn't very clear on that"
+
+    show samira neutral
+    
+    s "Fuck if I know."
+
+    scene bg lib chilling
+
+    "They sit in silence for a moment, trying to figure out what the hell they were for"
+
+    show samira excited
+
+    s "Wait a second!- wait no, that's stupid as hell"
+
+    show ernesto excited
+
+    e "Perhaps?"
+    
+    show ernesto neutral
+
+    e "No that can\'t be it"
+
+
+    show jordan surprised
+    
+    "For some reason, Jordan felt compelled to look up."
+
+    show ernesto neutral
+
+    e "Oh come on. The answer isn't written on the ceiling"
+
+    scene bg ceiling#the dark shall keep the light, and the light shall keep the dark. Then will balance be restored
+    pause
+
+    scene bg lib chilling
+
+    show samira happy
+    s "Guys, I think I know the answer!"
 
 menu:
-    "Take the light stone":
-        jump light_stone_choice
     "Take the dark stone":
         jump dark_stone_choice
+    "Take the light stone":
+        jump light_stone_choice
 
 label light_stone_choice:
-    "The world explodes into darkness"
+    "The world explodes into darknes"
+    scene bg bad ending
+    pause
     return
 
 label dark_stone_choice:
-    scene bg shining light
-
-    "Good job! The world is saved and everyone gets to live normally ever after."
+    scene bg bright
+    "The world is saved, and everyone can live happily ever after"
 
     scene bg good ending
-    return 
-
-
-    
-
-
-
-
-
-
+    pause
     return
