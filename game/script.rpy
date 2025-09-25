@@ -76,17 +76,20 @@ label start:
     pause
     with fade 
     scene busy hall
-    show Samira angry at right
-    show Jeante smile at left
+    show samira angry at right
+    show jeante smile at left
     s  "What the hell was that test? I swear she didn't cover half of that shit in class"
 
     show jeante bashful at left
 
     je "Eh, it wasn't that bad."
 
-    show jordan indignant at left
+    show samira smile at right
 
     "Samira flicks his letterman jacket."
+
+    show jeante indignant at left
+
     s "Ok, nerd. We can always count on you to fuck up the curve."
     je "Hey, you keep talking like that and I eat all the jerk chicken!"
     
@@ -94,6 +97,9 @@ label start:
 
     "Samira rolls her eyes."
     s "Fineeeeeee"
+
+    scene bg busy hallway
+
     "They head over to their \"VIP Senior Table\"."
 
     scene bg vipst
@@ -263,7 +269,7 @@ label start:
     je "Anyways"
     je "I brought some snacks! Y\’all should probably eat something before you go"
     
-    show samira excited
+    show samira smile
 
     show master smile 
     
@@ -546,11 +552,13 @@ label live_ernesto_choice:
 
     "They sit in silence for a moment, trying to figure out what the hell they were for"
 
-    show samira excited
+    show samira surprised
 
     s "Wait a second!- wait no, that's stupid as hell"
 
-    show ernesto excited
+    show samira neutral
+
+    show ernesto surprised
 
     e "Perhaps?"
     
