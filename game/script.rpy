@@ -75,7 +75,7 @@ label start:
     scene bg act1
     pause
     with fade 
-    scene busy hall
+    scene busy hallway
     show samira angry at right
     show jeante smile at left
     s  "What the hell was that test? I swear she didn't cover half of that shit in class"
@@ -88,7 +88,7 @@ label start:
 
     "Samira flicks his letterman jacket."
 
-    show jeante indignant at left
+    show jeante smile at left
 
     s "Ok, nerd. We can always count on you to fuck up the curve."
     je "Hey, you keep talking like that and I eat all the jerk chicken!"
@@ -114,7 +114,7 @@ label start:
 
     "Samira scoops up a generous amount of each."
 
-    show jeante indignant
+    show jeante serious
 
     "Hey! Save some for me"
 
@@ -295,7 +295,7 @@ label let_sit_choice:
 
     scene bg final  balance
     pause
-    scene park dusk
+    scene park night
     show Jeante nervous
 
     je "{i}This{/i} is it?"
