@@ -75,7 +75,7 @@ label start:
     scene bg act1
     pause
     with fade 
-    scene busy hallway
+    scene bg busy hallway
     show samira angry at right
     show jeante smile at left
     s  "What the hell was that test? I swear she didn't cover half of that shit in class"
@@ -96,6 +96,9 @@ label start:
     show samira thoughtful at right
 
     "Samira rolls her eyes."
+
+    show samira smile
+
     s "Fineeeeeee"
 
     scene bg busy hallway
@@ -109,37 +112,47 @@ label start:
     #maybe a drawing of this if I have time
     "Rice and peas, jerk chicken, and even some fried plantain!"
 
-    show samira devious
-    show jeante smile
+    show samira smile at right
+    show jeante smile at left
 
     "Samira scoops up a generous amount of each."
 
-    show jeante serious
+    show jeante serious at left
 
     "Hey! Save some for me"
 
-    show samira smile
+    show jeante smile at left
+
+    show samira smile at right
 
     s "Your parents may be assholes, but they sure can cook!"
 
-    show jeante nervous
+    show jeante nervous at left
 
     je "Yeah"
 
-    show jeante smile
+    show jeante smile at left
 
     "However, before she can get more than a few spoonfuls-"
+
+    hide jeante
+    show jordan serious at left
+
     "???" "Hey, can we talk? It\'s really important"
 
-    show samira thoughtful
+    show samira thoughtful at right
 
     "Samira reluctantly looks up at the person who\'d dared to interrupt their feast"
     "It was another senior that Samira didn\'t know that well. Jordan something? She vaguely remembered thinking in passing that they were cute but not much else"
 
-    show jeante nervous
+    hide jordan
+    show jeante nervous at left
 
     "She looks at Jeante"
     "He just shrugs"
+
+    hide jeante
+    show jordan serious at left
 
     # yes or no
     # no makes them slightly annoyed at you and they sit down anyway or maybe they crash out at the rejection and they get kicked out fo school. that would be funny+++++
@@ -183,7 +196,7 @@ label rebuke_choice:
 
 
 label let_sit_choice:    
-    show samira unbothered
+    show samira neutral
 
     s "Aight, pull up a seat I guess"
 
@@ -191,11 +204,12 @@ label let_sit_choice:
 
     "She continues eating her food"
 
-    show jo serious
+    show jordan serious
 
     jo "I might as well get to the point"
     "They pull out a key crafted in a beautiful star motif"
 
+    hide jordan
     show samira surprised
 
     s "Woah!"
@@ -222,8 +236,7 @@ label let_sit_choice:
 
     s "What the fuck was that?"
     
-    show samira sus
-    show jo surprised #or in awe
+    show jordan surprised #or in awe
 
     "Jordan stares at her in disbelief"
 
@@ -240,13 +253,15 @@ label let_sit_choice:
 
     je "This is so cooked. What if you get attacked or something?"
 
-    show samira nervous
+    show jeante nervous at left
+    show samira nervous at right
 
     s "I mean, Jordan seems pretty strong."
     s "Their shirt is baggy, but it doesn\'t hide the impressive muscle beneath"
     s "Plus they have those weapons"
     s "They could probably protect me?"
 
+    #side
     show jordan annoyed
 
     jo "Of course I'll protect you."
@@ -278,7 +293,7 @@ label let_sit_choice:
 
     jo "I appreciate sentiment, but I have to leave."
     
-    show samira unhappy
+    show samira sad
 
     s "..."
 
@@ -295,36 +310,48 @@ label let_sit_choice:
 
     scene bg final  balance
     pause
-    scene park night
-    show Jeante nervous
+    scene bg park night
+    show jeante serious
 
     je "{i}This{/i} is it?"
     "Mrs. Huynh looks at him sideways."
-    je "Sorry, it's just…so normal."
 
-    show jordan smile 
+    show jeante nervous
+
+    je "Sorry, it's just... so normal."
+
+    show jeante smile 
 
     je "Anyways"
     je "I brought some snacks! Y\’all should probably eat something before you go"
     
-    show samira smile
+    show jeante smile at right
+    show samira smile at left
 
-    show master smile 
+    s "YEAAA!"
+
+    hide samira
+    show master smile at left
     
     m "How thoughtful!"
 
+    scene bg park night
     show jordan thoughtful
 
     jo "We won't feel hunger in the dark realm"
 
-    show jeante sad
-    show samira sad
+    hide jordan
+    show jeante sad at right
+    show samira sad at left
 
     "..."
     
     show jordan nervous
 
     jo "I suppose it wouldn't hurt"
+
+    show jeante smile at right
+    show samira smile at left
     s "YEAA!"
 
     scene bg picnic
@@ -350,7 +377,8 @@ label let_sit_choice:
 
     s "Oof, curfew"
 
-    show jo confused
+    scene bg park night
+    show jordan thoughtful
     
     jo "Why don\'t you stay until midnight?"
 
@@ -502,28 +530,32 @@ label say_choice:
     scene bg black
     with fade
 
-    scene bg dark library
+    scene bg library
 
-    "If it weren\'t for the strange coloration, Samira would have thought that they were still in the library."
-    "That and the fact that in front of them was the Sun Chest"
+    "Samira would have thought that they were still in the same library except..."
+    "In front of them was the Sun Chest"
 
     scene bg treasure
 
     "It was just as she remembered it from her vision"
 
-    show j surprise
+    show jordan surprised
 
     "Jordan gasped"
+
+    scene bg library
     "s relief" "Well...that was easy"
     "???" "Stop right there scoundrels!"
 
-    show jordan serious
-    show samira nervous
+    show jordan serious at left
+    show samira nervous at right
 
     s "{i} Fucking jinxed it{/i}"
     #scene bg armed in in library?
     "At once, Jordan summoned their shield and spear"
     s "Grab it and escape Samira! I\'ll hold him off..."
+
+    show ernesto nervous at left
     "???" "WHOA! Is violence really worth a chest that can\'t even be opened?"
 
 menu:
@@ -546,6 +578,7 @@ label dead_ernesto_choice:
     pause
     return
 label live_ernesto_choice:
+    scene bg library
     show jordan serious
 
     "Jordan remains on guard"
@@ -571,7 +604,8 @@ label live_ernesto_choice:
     scene bg stones
     pause
 
-    show jo confused
+
+    show jordan confused
 
     jo "But, what are these stones for?"
 
