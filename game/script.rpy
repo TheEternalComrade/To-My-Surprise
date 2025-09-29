@@ -9,7 +9,8 @@ define je = Character("Jeante", color="#bf77f6", image="jeante")
 define m = Character("Mrs.Huynh", color="#000435", image="master")
 define e = Character("Ernesto", color="#d5c58a", image="ernesto")
 
-image side jordan happy = "test.jpg"
+define config.side_image_only_not_showing = True
+
 
 # The game starts here.
 
@@ -72,9 +73,6 @@ label start:
 
     #Merry meet
 
-    scene bg act1
-    pause
-    with fade 
     scene bg busy hallway
     show samira angry at right
     show jeante smile at left
@@ -112,46 +110,24 @@ label start:
     #maybe a drawing of this if I have time
     "Rice and peas, jerk chicken, and even some fried plantain!"
 
-    show samira smile at right
-    show jeante smile at left
-
+  
     "Samira scoops up a generous amount of each."
 
-    show jeante serious at left
+ 
 
-    "Hey! Save some for me"
-
-    show jeante smile at left
-
-    show samira smile at right
-
-    s "Your parents may be assholes, but they sure can cook!"
-
-    show jeante nervous at left
-
-    je "Yeah"
-
-    show jeante smile at left
+    je serious "Hey! Save some for me"
+    s smile"Your parents may be assholes, but they sure can cook!"
+    je nervous"Yeah"
 
     "However, before she can get more than a few spoonfuls-"
 
-    hide jeante
-    show jordan serious at left
+    show jordan serious
 
     "???" "Hey, can we talk? It\'s really important"
-
-    show samira thoughtful at right
-
     "Samira reluctantly looks up at the person who\'d dared to interrupt their feast"
     "It was another senior that Samira didn\'t know that well. Jordan something? She vaguely remembered thinking in passing that they were cute but not much else"
-
-    hide jordan
-    show jeante nervous at left
-
     "She looks at Jeante"
     "He just shrugs"
-
-    hide jeante
     show jordan serious at left
 
     # yes or no
@@ -165,19 +141,15 @@ menu:
         jump rebuke_choice
 
 label rebuke_choice:
-    show samira neutral
-    s "Nah, I'm kind occupied right now"
+    s neutral "Nah, I'm kind occupied right now"
     "She gestures towards her plate"
-    s "It can't be {i}that{/i} important. Maybe later"
+    s neutral "It can't be {i}that{/i} important. Maybe later"
 
-    show jordan angry
-
-    show jordan serious
     
-    jo "..."
+    jo serious "..."
 
-    show jordan angry #it would be cool if there was some sort of shake
-    "HOW DARE SHE!"
+    #it would be cool if there was some sort of shake
+    jo angry "HOW DARE SHE!"
     "What they had spent so much of their life training for, she simply dismisses?"
     "They see red"
 
@@ -196,29 +168,19 @@ label rebuke_choice:
 
 
 label let_sit_choice:    
-    show samira neutral
 
-    s "Aight, pull up a seat I guess"
+    s neutral "Aight, pull up a seat I guess"
 
     scene bg vipst3
 
     "She continues eating her food"
 
-    show jordan serious
-
-    jo "I might as well get to the point"
+    jo serious"I might as well get to the point"
     "They pull out a key crafted in a beautiful star motif"
-
-    hide jordan
-    show samira surprised
-
-    s "Woah!"
+    s surprised "Woah!"
     s "That's a helluva key!"
     "They offer it up to Samira."
-
-    show samira confused
-
-    s "Thanks?"
+    s thoughtful"Thanks?"
     "Gingerly, she reaches out to grab it"
     "Suddenly, she's transported...somewhere else."
 
@@ -228,88 +190,59 @@ label let_sit_choice:
     "It felt familiar and strange at the same time."
     "For some reason, she felt compelled to reach out for it."
 
-    scene vipst3
+    scene bg vipst3
+
     "But instead of the chest, there was her plate of food."
     "She drops it like it's made of lava."
-    
-    show samira surprised
+    s surprised"What the fuck was that?"
+    jo surprised "Jordan stares at her in disbelief"
 
-    s "What the fuck was that?"
-    
-    show jordan surprised #or in awe
+    scene bg black
+    jo "You're going to save this realm"
 
-    "Jordan stares at her in disbelief"
-
-    scene proclamation
-
-    "You're going to save this realm"
-
-    scene bg ph
-    pause
     #An explanation, disbelief, and some magical feats later
 
-    show bg vipst3
-    show jeante nervous
+    scene bg vipst3
 
-    je "This is so cooked. What if you get attacked or something?"
+    je nervous "This is so cooked. What if you get attacked or something?"
 
-    show jeante nervous at left
-    show samira nervous at right
+    s nervous"I mean, Jordan seems pretty strong."
+    "Their shirt is baggy, but it doesn\'t hide the impressive muscle beneath"
+    s nervous"Plus they have those weapons"
+    s nervous"They could probably protect me?"
 
-    s "I mean, Jordan seems pretty strong."
-    s "Their shirt is baggy, but it doesn\'t hide the impressive muscle beneath"
-    s "Plus they have those weapons"
-    s "They could probably protect me?"
 
-    #side
-    show jordan annoyed
+    jo annoyed"Of course I'll protect you."
 
-    jo "Of course I'll protect you."
+    je nervous"But you still have to go to some other realm!"
 
-    show jeante nervous
 
-    je "But you still have to go to some other realm!"
-
-    show samira thoughtful
-
-    s "I'd rather not do this, but I also don't really want to see what happens if I do nothing"
-    s "I must've been chosen because I'll succeed."
-    s "I'll be fine!"
-
-    show jeante nervous
-
-    je "I guess..."
-    s "Now come on, let\'s finish this food before lunch is over"
-    je "Bruh. How do you still have an appetite?"
+    s thoughtful"I'd rather not do this, but I also don't really want to see what happens if I do nothing"
+    s thoughtful"I must've been chosen because I'll succeed."
+    s smile"I'll be fine!"
+    je nervous"I guess..."
+    s smile"Now come on, let\'s finish this food before lunch is over"
+    je serious"Bruh. How do you still have an appetite?"
     "Jordan stands up  to leave"
     s "You too Jordan!"
     "Samira had noticed them eyeing the spread"
 
-    show jordan surprised
 
-    jo "..."
+    jo surprised"..."
 
-    show jordan serious 
-
-    jo "I appreciate sentiment, but I have to leave."
+    jo serious"I appreciate sentiment, but I have to leave."
     
-    show samira sad
+    s sad"..."
 
-    s "..."
 
-    show jeante sad
+    je sad"..."
 
-    je "..."
+    jo nervous"Maybe next time?"
 
-    show jordan nervous
+    "With that, they take their leave."
+    scene bg black
+    with fade
 
-    jo "Maybe next time?"
-
-    #"With that, they take their leave."
-    #choice?
-
-    scene bg final  balance
-    pause
     scene bg park night
     show jeante serious
 
@@ -323,7 +256,7 @@ label let_sit_choice:
     show jeante smile 
 
     je "Anyways"
-    je "I brought some snacks! Y\’all should probably eat something before you go"
+    je "I brought some snacks! Y\'all should probably eat something before you go"
     
     show jeante smile at right
     show samira smile at left
@@ -354,7 +287,7 @@ label let_sit_choice:
     show samira smile at left
     s "YEAA!"
 
-    scene bg picnic
+    scene bg black
     pause
     #fade
 
@@ -381,13 +314,18 @@ label let_sit_choice:
     show jordan thoughtful
     
     jo "Why don\'t you stay until midnight?"
-
+    
+    hide jordan
+    show jeante nervous
     je "My parents are really strict"
     je "They\'re probably already planning to jump me when I get home"
 
-    show samira thoughtful at left
+    hide jeante
+    show samira thoughtful
     s "On the other hand..."
     s "It would really mean a lot if you were there to send me off"
+
+    show samira smile
     s "Plus, it\'s not like you can get into more trouble?"
 
 menu:
@@ -397,16 +335,18 @@ menu:
             jump stay_choice
 
 label leave_choice:
-
+    hide samira
     show jeante sad
 
     je "Sorry bro, but I need to get home"
 
-    show samira sad
+    hide jeante
+    show jeante sad at right
+    show samira sad at left
 
     s "It was worth a shot"
 
-    show samira sadsmile
+    show samira sad smile
 
     s "c\'mere"
 
@@ -428,12 +368,14 @@ label leave_choice:
     return
 
 label stay_choice:
-
+    scene bg park night
     show jeante serious
     
     je "You know what? Fuck it, I'm staying!"
 
-    show samira smile
+
+    show jeante smile at right
+    show samira smile at left
 
     s "Woo!"
 
@@ -454,10 +396,10 @@ menu:
     ##choice to say it or not
 
 label stay_quiet_choice:
-
+    scene bg park night
     show jeante nervous
 
-    "He decides to stay quite"
+    "He decides to stay quiet"
     je "{i}It's probably nothing anyway{/i}"
     "Like everyone else, he watches in awe as Samira and Jordan enter and dissapear through the door."
 
@@ -473,7 +415,7 @@ label stay_quiet_choice:
     return
 
 label say_choice:
-
+    scene bg park night
     show jeante thoughtful
 
     jo "Why this place?"
@@ -493,7 +435,7 @@ label say_choice:
 
     m "..."
 
-    show master shocked
+    show master surprised
 
     m "You're right"
 
@@ -501,11 +443,13 @@ label say_choice:
 
     "This is the wrong gate"
 
-    show jordan shocked
-    show samira surpised
-    show jeante shocked
+    hide master
+    show jordan surprised at left
+    show samira surprised
+    show jeante surprised at right
     "What?!"
 
+    scene bg park night
     show master serious
 
     "But I know where the right one is. We need to go {i}now{/i}"
@@ -555,7 +499,9 @@ label say_choice:
     "At once, Jordan summoned their shield and spear"
     s "Grab it and escape Samira! I\'ll hold him off..."
 
+    hide samira
     show ernesto nervous at left
+    show jordan serious at right
     "???" "WHOA! Is violence really worth a chest that can\'t even be opened?"
 
 menu:
@@ -579,13 +525,11 @@ label dead_ernesto_choice:
     return
 label live_ernesto_choice:
     scene bg library
-    show jordan serious
+    show jordan serious at right
+    show ernesto nervous at left
 
     "Jordan remains on guard"
     jo "We need that chest to save our world."
-    
-    show ernesto nervous
-
     "???" "Well I\'m sure we can come to an agreement if-"
 
     show ernesto surprised
@@ -594,7 +538,7 @@ label live_ernesto_choice:
     "The young man is looking at Samira now"
     "She's staring at the contents of the now open chest, the star key in the lock."
 
-    show ernesto surpised
+    show ernesto surprised
     "???" "Wait a second"
     "???" "“I think there\'s been a misunderstanding"
 
@@ -605,31 +549,35 @@ label live_ernesto_choice:
     pause
 
 
-    show jordan confused
+    show jordan thoughtful
 
     jo "But, what are these stones for?"
 
-    scene bg lib chilling
+    scene bg library
 
     show ernesto neutral
 
     "Ernesto shrugs"
     e "Our prophecy wasn't very clear on that"
 
+    hide ernesto
     show samira neutral
     
     s "Fuck if I know."
 
-    scene bg lib chilling
+    scene bg library
 
     "They sit in silence for a moment, trying to figure out what the hell they were for"
 
     show samira surprised
 
-    s "Wait a second!- wait no, that's stupid as hell"
+    s "Wait a second!"
 
     show samira neutral
 
+    "Wait no, that's stupid as hell"
+
+    hide samira
     show ernesto surprised
 
     e "Perhaps?"
@@ -638,7 +586,7 @@ label live_ernesto_choice:
 
     e "No that can\'t be it"
 
-
+    hide ernesto
     show jordan surprised
     
     "For some reason, Jordan felt compelled to look up."
@@ -650,9 +598,9 @@ label live_ernesto_choice:
     scene bg ceiling#the dark shall keep the light, and the light shall keep the dark. Then will balance be restored
     pause
 
-    scene bg lib chilling
+    scene bg library
 
-    show samira happy
+    show samira smile
     s "Guys, I think I know the answer!"
 
 menu:
@@ -662,7 +610,8 @@ menu:
         jump light_stone_choice
 
 label light_stone_choice:
-    "The world explodes into darknes"
+    scene bg black
+    "The world explodes into darkness"
     scene bg bad ending
     pause
     return
