@@ -200,7 +200,8 @@ label let_sit_choice:
     scene bg black
     jo "You're going to save this realm"
 
-    #An explanation, disbelief, and some magical feats later
+    scene bg magical
+    pause
 
     scene bg vipst3
 
@@ -279,9 +280,8 @@ label let_sit_choice:
 
     "..."
     
-    show jordan nervous
 
-    jo "I suppose it wouldn't hurt"
+    jo nervous"I suppose it wouldn't hurt"
 
     show jeante smile at right
     show samira smile at left
@@ -297,7 +297,7 @@ label let_sit_choice:
 
     show jeante surprised
 
-    "It's half past 10!"
+    "It's half past ten!"
 
     show jeante sad
 
@@ -350,7 +350,7 @@ label leave_choice:
 
     s "c\'mere"
 
-    scene bg hug
+    scene bg dap
 
     je "Stay safe Samira"
     s "I'll be back to harass your sorry ass before you know it"
@@ -511,10 +511,12 @@ menu:
         jump live_ernesto_choice
 
 label dead_ernesto_choice:
+    scene bg library
     "Jordan had been expecting the young man to put up a fight"
     "But he did nothing to stop the spear from piercing straight through his heart"
 
-    scene bg ernesto dead
+    scene bg black
+    show ernesto dead
     pause
 
     "For a moment, there is silence"
@@ -548,10 +550,7 @@ label live_ernesto_choice:
     scene bg stones
     pause
 
-
-    show jordan thoughtful
-
-    jo "But, what are these stones for?"
+    jo serious  "But, what are these stones for?"
 
     scene bg library
 
@@ -591,6 +590,7 @@ label live_ernesto_choice:
     
     "For some reason, Jordan felt compelled to look up."
 
+    hide jordan
     show ernesto neutral
 
     e "Oh come on. The answer isn't written on the ceiling"
@@ -617,8 +617,13 @@ label light_stone_choice:
     return
 
 label dark_stone_choice:
+    scene bg black 
+    with fade
     scene bg bright
-    "The world is saved, and everyone can live happily ever after"
+    pause
+
+    scene bg bright
+    "The world is saved, and everyone can live normally ever after"
 
     scene bg good ending
     pause
