@@ -104,6 +104,7 @@ label start:
     "They head over to their \"VIP Senior Table\"."
 
     scene bg vipst
+    with fade
     
     "Jeante lays out the spread of food he had brought for them."
 
@@ -154,13 +155,13 @@ label rebuke_choice:
     "They see red"
 
     scene bg black
-
     "Jordan has to be escorted out of the school."
-    "It took several security guards to do it."
+    "It takes several security guards to do it."
     "They never got to tell Samira that she was the chosen one."
     "The world ends"
 
     scene bg bad ending
+    with fade
     pause
 
     return
@@ -185,12 +186,14 @@ label let_sit_choice:
     "Suddenly, she's transported...somewhere else."
 
     scene bg treasure
+    with fade
 
     "Where the food was just a moment before, she sees an intricate chest."
     "It felt familiar and strange at the same time."
     "For some reason, she felt compelled to reach out for it."
 
     scene bg vipst3
+    with fade
 
     "But instead of the chest, there was her plate of food."
     "She drops it like it's made of lava."
@@ -201,6 +204,7 @@ label let_sit_choice:
     jo "You're going to save this realm"
 
     scene bg magical
+    with fade
     pause
 
     scene bg vipst3
@@ -288,6 +292,7 @@ label let_sit_choice:
     s "YEAA!"
 
     scene bg black
+    with fade
     pause
     #fade
 
@@ -351,11 +356,14 @@ label leave_choice:
     s "c\'mere"
 
     scene bg dap
+    with fade
+    pause
 
     je "Stay safe Samira"
     s "I'll be back to harass your sorry ass before you know it"
 
     scene bg black
+    with fade
     pause
 
     "That was the last time he ever saw her."
@@ -363,6 +371,7 @@ label leave_choice:
     "They had failed, and the world was going to end."
 
     scene bg bad ending
+    with fade
     pause
 
     return
@@ -404,12 +413,14 @@ label stay_quiet_choice:
     "Like everyone else, he watches in awe as Samira and Jordan enter and dissapear through the door."
 
     scene bg black
+    with fade
 
     "That was the last time he ever saw her."
     "What was supposed to have been simple grab-n-go had turned awry."
     "They had failed, and the world was going to end."
 
     scene bg bad ending
+    with fade
     pause
 
     return
@@ -457,6 +468,7 @@ label say_choice:
     scene bg car drive
 
     scene bg library
+    with fade
 
     "Somehow they made it just in the nick of time"
     "Thank goodness for all-day libraries"
@@ -517,12 +529,16 @@ label dead_ernesto_choice:
 
     scene bg black
     show ernesto dead
+    with fade
     pause
 
     "For a moment, there is silence"
+
+    hide ernesto
     "Then the world explodes into darkness"
 
     scene bg bad ending
+    with fade
     pause
     return
 label live_ernesto_choice:
@@ -613,6 +629,7 @@ label light_stone_choice:
     scene bg black
     "The world explodes into darkness"
     scene bg bad ending
+    with fade
     pause
     return
 
