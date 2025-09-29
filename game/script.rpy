@@ -640,7 +640,8 @@ label dark_stone_choice:
     pause
 
     scene bg bright
-    "The world is saved, and everyone can live normally ever after"
+    "The world is saved!" 
+    "Everyone can live normally ever after"
 
     scene bg good ending
     pause
